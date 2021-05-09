@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentCoordList">
+    <fragment
+        android:id="@+id/fragmentCoordList"
+        android:name="com.example.mymoovingpicture.FragmentCoordList"
+        android:label="FragmentCoordList" >
+        <action
+            android:id="@+id/action_fragmentCoordList_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_fragmentCoordList_to_enterRouteName"
+            app:destination="@id/enterRouteName" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.mymoovingpicture.MapFragment"
+        android:label="map_fragment"
+        tools:layout="@layout/map_fragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_fragmentCoordList"
+            app:destination="@id/fragmentCoordList" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterRouteName"
+        android:name="com.example.mymoovingpicture.EnterRouteName"
+        android:label="EnterRouteName" >
+        <action
+            android:id="@+id/action_enterRouteName_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+
+</navigation>

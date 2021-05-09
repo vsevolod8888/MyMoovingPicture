@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="route"
+            type="com.example.mymoovingpicture.domain.RouteDomain"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="описание"
+            android:autoSizeTextType="none"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            app:setHeading="@{route}"/>
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="описание"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            app:setTime="@{route}"/>
+
+
+    </LinearLayout>
+</layout>
